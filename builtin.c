@@ -2,7 +2,7 @@
 
 /**
  * _myexit - It exits the shell
- * @infor: A structure containing potential arguments. Used to maintain the constant function prototype.
+ * @infor: A structure containing  potential arguments. Used to maintain the constant function prototype.
  * Return: Exits with a given exit status.
  * (0) if info.argv[0] != "exit"
  */
