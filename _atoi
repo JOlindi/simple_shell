@@ -1,0 +1,9 @@
+#include "shell.h"
+
+/**
+ * interactive - It returns true if shell is interactive mode
+ * @info: a struct address
+ *
+ * Return: 1 if interactive mode, 0 otherwise
+ */
+
