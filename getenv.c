@@ -80,7 +80,7 @@ int _setenv(info_t *infor, char *var, char *value)
 		{
 			free(node->str);
 			node->str = buf;
-			info->env_changed = 1;
+			infor->env_changed = 1;
 			return (0);
 		}
 		node = node->next;

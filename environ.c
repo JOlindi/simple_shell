@@ -23,7 +23,7 @@ int _myenv(info_t *infor)
 
 char *_getenv(info_t *infor, const char *name)
 {
-	list_t *node = info->env;
+	list_t *node = infor->env;
 	char *w;
 
 	while (node)
@@ -88,7 +88,7 @@ int populate_env_list(info_t *infor)
 
 	for (i = 0; environ[i]; i++)
 		add_node_end(&node, environ[i], 0);
-	info->env = node;
+	infor->env = node;
 	return (0);
 }
 

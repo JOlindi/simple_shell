@@ -12,6 +12,7 @@
 #include <sys/wait.h>
 #include <sys/types.h>
 #include <ctype.h>
+#include <limits.h>
 
 /*For read/write buffers */
 #define READ_BUF_SIZE	1024
@@ -129,7 +130,7 @@ int loophsh(char **);
 /* toem_errors.c */
 void _eputs(char *);
 int _eputchar(char);
-int _putfd(char c, int fd);
+int _putfd(char q, int fd);
 int _putsfd(char *str, int fd);
 
 /* toem_string.c */
@@ -164,7 +165,7 @@ int bfree(void **);
 /* toem_atoi.c */
 int interactive(info_t *);
 int is_delim(char, char *);
-int _isalpha(int);
+int isAlpha(int);
 int _atoi(char *);
 
 /* toem_errors1.c */
@@ -206,11 +207,11 @@ int _unsetenv(info_t *, char *);
 int _setenv(info_t *, char *, char *);
 
 /* toem_history.c */
-char *get_history_file(info_t *info);
-int write_history(info_t *info);
-int read_history(info_t *info);
-int build_history_list(info_t *info, char *buf, int linecount);
-int renumber_history(info_t *info);
+char *get_history_file(info_t *infor);
+int write_history(info_t *infor);
+int read_history(info_t *infor);
+int build_history_list(info_t *infor, char *buf, int linecount);
+int renumber_history(info_t *infor);
 
 /* toem_lists.c */
 list_t *add_node(list_t **, const char *, int);
